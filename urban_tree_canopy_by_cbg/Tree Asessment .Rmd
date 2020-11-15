@@ -27,8 +27,9 @@ census_trees <- read_csv("Tacoma_WA_UTC_Results_tidy.csv") %>%
 
 
 ```{r}
-# Next we need to add in the leaf area index, I'll use the average based on temporal zones in the PNW which is a value of 6
-mutate(avg_LAI = 6)
+# Next we need to add in the leaf area index, I'll use the average based on previous Nowak studies and also used as the base amount in i-Tree suite
+lai_added <- census_trees %>% 
+mutate(avg_LAI = 4.9)
 
 
 
